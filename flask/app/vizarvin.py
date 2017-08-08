@@ -4,7 +4,7 @@ from flask import render_template, request, Response, jsonify,redirect,url_for,f
 from werkzeug.utils import secure_filename
 
 from app import app
-
+import pandas as pd
 from pandas.util import hash_pandas_object
 
 
