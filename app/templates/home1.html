@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+
+#NavBar {
+  font-size: 10pt;
+  font-family: "Alfa Slab One",Impact,sans-serif;
+  color: #FFFFFF;
+  background-color: rgba(72,74,74,0.8);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#NavRight {
+  display: inline-block;
+  float: right;
+}
+
+#NavBar a {
+  text-decoration: none;
+  padding-left: 0;
+  padding-right: 50px;
+}
+
+#introImage {
+  font-size: 50pt;
+  font-family: "Alfa Slab One";
+  background-image: url(static/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#title {
+  color: #FFFFFF;
+  text-align: left;
+  margin-left: 125px;
+  margin-right: 125px;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.heading {
+  font-family: "Alfa Slab One";
+  font-size: 20pt;
+  text-align: center;
+}
+
+#Section1 {
+  background-color: #A9A9A9;
+  color: #FFFFFF;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+
+#Section2 {
+  background-color: #00CDCD;
+  color: #FFFFFF;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+
+#Section3 {
+  background-color: #FFFFFF;
+  color: #484A4A;
+  width: 1200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#Section4 {
+  background-color: #A9A9A9;
+  color: #FFFFFF;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+
+#Section5 {
+  background-color: #00CDCD;
+  color: #FFFFFF;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+
+body {
+  margin:0;
+  font-family: "Open Sans Condensed","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16pt;
+  text-align: justify;
+}
+
+body a {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.centered {
+  text-align: center;
+}
+
+</style>
+
+<head>
+  <title>LearningMachine</title>
+  <link rel="stylesheet" href="/static/test.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Open+Sans+Condensed:300" rel="stylesheet">
+</head>
+
+<body>
+
+  <div id="NavBar">
+    <a href="#top">Machine Learing for All</a>
+    <div id="NavRight">
+      <a href="#Section1">Problem</a>
+      <a href="#Section2">Solution</a>
+      <a href="#Section3">Try it out</a>
+      <a href="#Section4">Methodology</a>
+      <a href="#Section5">Meet the team</a>
+    </div>
+  </div>
+
+  <div id="top"></div>
+
+  <div id="introImage">
+    <p id="title">Learning<br />Machine</p>
+  </div>
+
+  <div id="Section1">
+    <p class="heading">☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆</p>
+    <p class="heading">Problem</p>
+    <p>
+    </p>
+  </div>
+
+  <div id="Section2">
+    <p class="heading">☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆</p>
+    <p class="heading">Solution</p>
+    <p>
+    </p>
+  </div>
+
+  <div id="Section3">
+    <p class="heading">☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆</p>
+    <p class="heading">Try it out</p>
+    <p>
+      <!-- <object type="text/html" data="/viz" width="100%" height="1300" align="center">
+      </object> -->
+    </p>
+  </div>
+
+  <div class="container">
+      <div class="panel panel-default">
+        <div class="panel-heading"><strong>Upload Files</strong></div>
+        <div class="panel-body">
+
+          <!-- Standard Form -->
+          <h4>Select files from your computer</h4>
+          <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
+            <div class="form-inline">
+              <h5>Training data</h5>
+              <div class="form-group">
+                <input type="file" name="train" id="js-train-files" multiple>
+              </div>
+
+              <h5>Testing data</h5>
+              <div class="form-group">
+                <input type="file" name="test" id="js-test-files" multiple>
+              </div>
+
+              <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Upload files</button>
+            </div>
+          </form>
+
+          <!-- Drop Zone -->
+          <h4>Or drag and drop files below</h4>
+          <div class="upload-drop-zone" id="drop-zone">
+            Just drag and drop files here
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+              <span class="sr-only">60% Complete</span>
+            </div>
+          </div>
+
+          <!-- Upload Finished -->
+          <div class="js-upload-finished">
+            <h3>Processed files</h3>
+            <div class="list-group">
+              <!-- <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-01.jpg</a>
+              <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-02.jpg</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- /container -->
+
+    <div class="container">
+        <div class="panel panel-default">
+          <div class="panel-heading"><strong>Model Output</strong></div>
+          <div class="panel-body">
+            <h4>Prediction accuracy</h4>
+            <h5></h5>
+            <h4>Download prediction output</h4>
+            <a href="http://0.0.0.0:5000/prediction" target="_blank">Prediction!</a>
+          </div>
+        </div>
+    </div>
+
+  <script>
+  window.setInterval(function(){
+  console.log("LOLLL");
+  }, 1000);
+
+  + function($) {
+    'use strict';
+
+    // UPLOAD CLASS DEFINITION
+    // ======================
+
+    var dropZone = document.getElementById('drop-zone');
+    var uploadForm = document.getElementById('js-upload-form');
+
+    var startUpload = function(train, test) {
+        // Jacky read this: http://blog.teamtreehouse.com/uploading-files-ajax
+        // console.log(train, test);
+        var formData = new FormData();
+        for (var i = 0; i < train.length; i++) {
+          var file = train[i];
+          formData.append("train", file, file.name);
+        }
+
+        for (var i = 0; i < test.length; i++) {
+          var file = test[i];
+          formData.append("test", file, file.name);
+        }
+
+        console.log(formData);
+
+        fetch('/dataset', {
+          method: 'POST',
+          body: formData
+        })
+    }
+
+    uploadForm.addEventListener('submit', function(e) {
+        var trainFiles = document.getElementById('js-train-files').files;
+        var testFiles = document.getElementById('js-test-files').files;
+        e.preventDefault()
+
+        startUpload(trainFiles, testFiles);
+    })
+
+    dropZone.ondrop = function(e) {
+        e.preventDefault();
+        this.className = 'upload-drop-zone';
+
+        startUpload(e.dataTransfer.files)
+    }
+
+    dropZone.ondragover = function() {
+        this.className = 'upload-drop-zone drop';
+        return false;
+    }
+
+    dropZone.ondragleave = function() {
+        this.className = 'upload-drop-zone';
+        return false;
+    }
+
+  }(jQuery);
+  </script>
+  <div id="Section4">
+    <p class="heading">☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆</p>
+    <p class="heading">Methodology</p>
+    <p>
+    </p>
+  </div>
+
+  <div id="Section5">
+    <p class="heading">☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆</p>
+    <p class="heading">Meet the team</p>
+    We are students enrolled in UC Berkeley's Master of Information and Data
+    Science program. This capstone project is the culmination of all the skills
+    we have acquired from this program.  (<a
+    href="https://www.ischool.berkeley.edu/courses/datasci/210" target="_blank">W210
+    - Capstone</a>).
+    <p>
+    <div class="centered">
+      <a href="https://ca.linkedin.com/in/nandu-menon-b3425028" target="_blank">Nandu&nbspMenon</a> &nbsp &nbsp
+      <a href="https://www.linkedin.com/in/arvinsahni" target="_blank">Arvin&nbspSahni</a> &nbsp &nbsp
+      <a href="https://www.linkedin.com/in/jason-sanchez-62093847" target="_blank">Jason&nbspSanchez</a> &nbsp &nbsp
+      <a href="https://www.linkedin.com/in/jackywzhang" target="_blank">Jacky&nbspZhang</a> &nbsp &nbsp
+    </div>
+    </p>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,2 +1,1 @@
-# machine-learning-for-all
-Project for Berkeley data science program
+# Flask related code for ML4all
